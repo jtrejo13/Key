@@ -11,12 +11,15 @@
 		2003E5961F550DCB00C5F79C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5951F550DCB00C5F79C /* AppDelegate.m */; };
 		2003E5991F550DCB00C5F79C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5981F550DCB00C5F79C /* ViewController.m */; };
 		2003E59C1F550DCB00C5F79C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2003E59A1F550DCB00C5F79C /* Main.storyboard */; };
-		2003E59F1F550DCB00C5F79C /* Key.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2003E59D1F550DCB00C5F79C /* Key.xcdatamodeld */; };
 		2003E5A11F550DCB00C5F79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2003E5A01F550DCB00C5F79C /* Assets.xcassets */; };
 		2003E5A41F550DCB00C5F79C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2003E5A21F550DCB00C5F79C /* LaunchScreen.storyboard */; };
 		2003E5AF1F550DCC00C5F79C /* KeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5AE1F550DCC00C5F79C /* KeyTests.m */; };
 		2003E5BA1F550DCC00C5F79C /* KeyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5B91F550DCC00C5F79C /* KeyUITests.m */; };
 		2003E5E01F565CD100C5F79C /* QRCodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5DF1F565CD100C5F79C /* QRCodeTableViewController.m */; };
+		2003E5E31F56626C00C5F79C /* Key.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5E11F56626C00C5F79C /* Key.xcdatamodeld */; };
+		2003E5E81F56665B00C5F79C /* QRCode+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5E51F56665B00C5F79C /* QRCode+CoreDataClass.m */; };
+		2003E5E91F56665B00C5F79C /* QRCode+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5E71F56665B00C5F79C /* QRCode+CoreDataProperties.m */; };
+		2003E5EC1F56676D00C5F79C /* QRCodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,6 @@
 		2003E5971F550DCB00C5F79C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2003E5981F550DCB00C5F79C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2003E59B1F550DCB00C5F79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2003E59E1F550DCB00C5F79C /* Key.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Key.xcdatamodel; sourceTree = "<group>"; };
 		2003E5A01F550DCB00C5F79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2003E5A31F550DCB00C5F79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2003E5A51F550DCB00C5F79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +58,13 @@
 		2003E5BB1F550DCC00C5F79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2003E5DE1F565CD100C5F79C /* QRCodeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeTableViewController.h; sourceTree = "<group>"; };
 		2003E5DF1F565CD100C5F79C /* QRCodeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeTableViewController.m; sourceTree = "<group>"; };
+		2003E5E21F56626C00C5F79C /* Key.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Key.xcdatamodel; sourceTree = "<group>"; };
+		2003E5E41F56665B00C5F79C /* QRCode+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QRCode+CoreDataClass.h"; sourceTree = "<group>"; };
+		2003E5E51F56665B00C5F79C /* QRCode+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QRCode+CoreDataClass.m"; sourceTree = "<group>"; };
+		2003E5E61F56665B00C5F79C /* QRCode+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QRCode+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2003E5E71F56665B00C5F79C /* QRCode+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QRCode+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2003E5EA1F56676D00C5F79C /* QRCodeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeTableViewCell.h; sourceTree = "<group>"; };
+		2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +117,8 @@
 			children = (
 				2003E5DE1F565CD100C5F79C /* QRCodeTableViewController.h */,
 				2003E5DF1F565CD100C5F79C /* QRCodeTableViewController.m */,
+				2003E5EA1F56676D00C5F79C /* QRCodeTableViewCell.h */,
+				2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */,
 				2003E5941F550DCB00C5F79C /* AppDelegate.h */,
 				2003E5951F550DCB00C5F79C /* AppDelegate.m */,
 				2003E5971F550DCB00C5F79C /* ViewController.h */,
@@ -151,7 +162,11 @@
 		2003E5D31F5659F600C5F79C /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				2003E59D1F550DCB00C5F79C /* Key.xcdatamodeld */,
+				2003E5E41F56665B00C5F79C /* QRCode+CoreDataClass.h */,
+				2003E5E51F56665B00C5F79C /* QRCode+CoreDataClass.m */,
+				2003E5E61F56665B00C5F79C /* QRCode+CoreDataProperties.h */,
+				2003E5E71F56665B00C5F79C /* QRCode+CoreDataProperties.m */,
+				2003E5E11F56626C00C5F79C /* Key.xcdatamodeld */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -293,10 +308,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2003E5991F550DCB00C5F79C /* ViewController.m in Sources */,
-				2003E59F1F550DCB00C5F79C /* Key.xcdatamodeld in Sources */,
+				2003E5EC1F56676D00C5F79C /* QRCodeTableViewCell.m in Sources */,
 				2003E5961F550DCB00C5F79C /* AppDelegate.m in Sources */,
 				2003E5E01F565CD100C5F79C /* QRCodeTableViewController.m in Sources */,
+				2003E5E81F56665B00C5F79C /* QRCode+CoreDataClass.m in Sources */,
 				2003E5931F550DCB00C5F79C /* main.m in Sources */,
+				2003E5E91F56665B00C5F79C /* QRCode+CoreDataProperties.m in Sources */,
+				2003E5E31F56626C00C5F79C /* Key.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,12 +574,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2003E59D1F550DCB00C5F79C /* Key.xcdatamodeld */ = {
+		2003E5E11F56626C00C5F79C /* Key.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2003E59E1F550DCB00C5F79C /* Key.xcdatamodel */,
+				2003E5E21F56626C00C5F79C /* Key.xcdatamodel */,
 			);
-			currentVersion = 2003E59E1F550DCB00C5F79C /* Key.xcdatamodel */;
+			currentVersion = 2003E5E21F56626C00C5F79C /* Key.xcdatamodel */;
 			path = Key.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
