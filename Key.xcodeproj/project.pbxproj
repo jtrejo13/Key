@@ -16,6 +16,7 @@
 		2003E5A41F550DCB00C5F79C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2003E5A21F550DCB00C5F79C /* LaunchScreen.storyboard */; };
 		2003E5AF1F550DCC00C5F79C /* KeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5AE1F550DCC00C5F79C /* KeyTests.m */; };
 		2003E5BA1F550DCC00C5F79C /* KeyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5B91F550DCC00C5F79C /* KeyUITests.m */; };
+		2003E5E01F565CD100C5F79C /* QRCodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5DF1F565CD100C5F79C /* QRCodeTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		2003E5B51F550DCC00C5F79C /* KeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2003E5B91F550DCC00C5F79C /* KeyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyUITests.m; sourceTree = "<group>"; };
 		2003E5BB1F550DCC00C5F79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2003E5DE1F565CD100C5F79C /* QRCodeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeTableViewController.h; sourceTree = "<group>"; };
+		2003E5DF1F565CD100C5F79C /* QRCodeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +106,14 @@
 		2003E5901F550DCB00C5F79C /* Key */ = {
 			isa = PBXGroup;
 			children = (
+				2003E5DE1F565CD100C5F79C /* QRCodeTableViewController.h */,
+				2003E5DF1F565CD100C5F79C /* QRCodeTableViewController.m */,
 				2003E5941F550DCB00C5F79C /* AppDelegate.h */,
 				2003E5951F550DCB00C5F79C /* AppDelegate.m */,
 				2003E5971F550DCB00C5F79C /* ViewController.h */,
 				2003E5981F550DCB00C5F79C /* ViewController.m */,
 				2003E59A1F550DCB00C5F79C /* Main.storyboard */,
-				2003E5A01F550DCB00C5F79C /* Assets.xcassets */,
-				2003E5A21F550DCB00C5F79C /* LaunchScreen.storyboard */,
-				2003E5A51F550DCB00C5F79C /* Info.plist */,
-				2003E59D1F550DCB00C5F79C /* Key.xcdatamodeld */,
+				2003E5D31F5659F600C5F79C /* Core Data */,
 				2003E5911F550DCB00C5F79C /* Supporting Files */,
 			);
 			path = Key;
@@ -120,6 +122,9 @@
 		2003E5911F550DCB00C5F79C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2003E5A01F550DCB00C5F79C /* Assets.xcassets */,
+				2003E5A21F550DCB00C5F79C /* LaunchScreen.storyboard */,
+				2003E5A51F550DCB00C5F79C /* Info.plist */,
 				2003E5921F550DCB00C5F79C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -141,6 +146,14 @@
 				2003E5BB1F550DCC00C5F79C /* Info.plist */,
 			);
 			path = KeyUITests;
+			sourceTree = "<group>";
+		};
+		2003E5D31F5659F600C5F79C /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				2003E59D1F550DCB00C5F79C /* Key.xcdatamodeld */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +295,7 @@
 				2003E5991F550DCB00C5F79C /* ViewController.m in Sources */,
 				2003E59F1F550DCB00C5F79C /* Key.xcdatamodeld in Sources */,
 				2003E5961F550DCB00C5F79C /* AppDelegate.m in Sources */,
+				2003E5E01F565CD100C5F79C /* QRCodeTableViewController.m in Sources */,
 				2003E5931F550DCB00C5F79C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
