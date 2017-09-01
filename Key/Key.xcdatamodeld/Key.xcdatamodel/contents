@@ -3,7 +3,7 @@
     <entity name="QRCode" representedClassName="QRCode" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="members" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="members" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="QRCode" positionX="-36" positionY="9" width="128" height="90"/>

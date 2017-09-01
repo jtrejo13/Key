@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *category;
 @property (nullable, nonatomic, retain) NSObject *image;
-@property (nullable, nonatomic, retain) NSObject *members;
+@property (nullable, nonatomic, retain) NSString *members;
 
 @end
 
