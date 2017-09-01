@@ -16,7 +16,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // Override point for customization after application launch.
+    _window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+    UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    
+    RKSwipeBetweenViewControllers *swipeController = [[RKSwipeBetweenViewControllers alloc] initWithRootViewController:pageController];
+    
+    UIViewController *dummy = [[UIViewController alloc] init];
+    dummy.view.backgroundColor = [UIColor blackColor];
+    QRCodeTableViewController *tableController = [[QRCodeTableViewController alloc] init];
+    
+    [swipeController.viewControllerArray addObjectsFromArray:@[dummy, tableController]];
+    
+    _window.rootViewController = swipeController;
+    [_window makeKeyAndVisible];
+    
     return YES;
 }
 
