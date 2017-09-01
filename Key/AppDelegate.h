@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "RKSwipeBetweenViewControllers.h"
 #import "QRCodeTableViewController.h"
+#import "QRCodeCameraViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

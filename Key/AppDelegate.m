@@ -24,11 +24,10 @@
     
     RKSwipeBetweenViewControllers *swipeController = [[RKSwipeBetweenViewControllers alloc] initWithRootViewController:pageController];
     
-    UIViewController *dummy = [[UIViewController alloc] init];
-    dummy.view.backgroundColor = [UIColor blackColor];
+    QRCodeCameraViewController *cameraController = [[QRCodeCameraViewController alloc] init];
     QRCodeTableViewController *tableController = [[QRCodeTableViewController alloc] init];
     
-    [swipeController.viewControllerArray addObjectsFromArray:@[dummy, tableController]];
+    [swipeController.viewControllerArray addObjectsFromArray:@[cameraController, tableController]];
     
     _window.rootViewController = swipeController;
     [_window makeKeyAndVisible];

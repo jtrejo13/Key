@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200010AD1F59BB9700C6616C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200010AC1F59BB9700C6616C /* Main.storyboard */; };
 		2003E5931F550DCB00C5F79C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5921F550DCB00C5F79C /* main.m */; };
 		2003E5961F550DCB00C5F79C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5951F550DCB00C5F79C /* AppDelegate.m */; };
-		2003E5991F550DCB00C5F79C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5981F550DCB00C5F79C /* ViewController.m */; };
-		2003E59C1F550DCB00C5F79C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2003E59A1F550DCB00C5F79C /* Main.storyboard */; };
+		2003E5991F550DCB00C5F79C /* QRCodeCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5981F550DCB00C5F79C /* QRCodeCameraViewController.m */; };
 		2003E5A11F550DCB00C5F79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2003E5A01F550DCB00C5F79C /* Assets.xcassets */; };
 		2003E5A41F550DCB00C5F79C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2003E5A21F550DCB00C5F79C /* LaunchScreen.storyboard */; };
 		2003E5AF1F550DCC00C5F79C /* KeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5AE1F550DCC00C5F79C /* KeyTests.m */; };
@@ -41,13 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		200010AC1F59BB9700C6616C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2003E58E1F550DCB00C5F79C /* Key.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Key.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2003E5921F550DCB00C5F79C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2003E5941F550DCB00C5F79C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2003E5951F550DCB00C5F79C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2003E5971F550DCB00C5F79C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2003E5981F550DCB00C5F79C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2003E59B1F550DCB00C5F79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2003E5971F550DCB00C5F79C /* QRCodeCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeCameraViewController.h; sourceTree = "<group>"; };
+		2003E5981F550DCB00C5F79C /* QRCodeCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeCameraViewController.m; sourceTree = "<group>"; };
 		2003E5A01F550DCB00C5F79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2003E5A31F550DCB00C5F79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2003E5A51F550DCB00C5F79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,9 +126,9 @@
 				2003E5DF1F565CD100C5F79C /* QRCodeTableViewController.m */,
 				2003E5EA1F56676D00C5F79C /* QRCodeTableViewCell.h */,
 				2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */,
-				2003E5971F550DCB00C5F79C /* ViewController.h */,
-				2003E5981F550DCB00C5F79C /* ViewController.m */,
-				2003E59A1F550DCB00C5F79C /* Main.storyboard */,
+				2003E5971F550DCB00C5F79C /* QRCodeCameraViewController.h */,
+				2003E5981F550DCB00C5F79C /* QRCodeCameraViewController.m */,
+				200010AC1F59BB9700C6616C /* Main.storyboard */,
 				2003E5D31F5659F600C5F79C /* Core Data */,
 				2003E5911F550DCB00C5F79C /* Supporting Files */,
 			);
@@ -287,7 +287,7 @@
 			files = (
 				2003E5A41F550DCB00C5F79C /* LaunchScreen.storyboard in Resources */,
 				2003E5A11F550DCB00C5F79C /* Assets.xcassets in Resources */,
-				2003E59C1F550DCB00C5F79C /* Main.storyboard in Resources */,
+				200010AD1F59BB9700C6616C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2003E5991F550DCB00C5F79C /* ViewController.m in Sources */,
+				2003E5991F550DCB00C5F79C /* QRCodeCameraViewController.m in Sources */,
 				2003E5EC1F56676D00C5F79C /* QRCodeTableViewCell.m in Sources */,
 				2003E5961F550DCB00C5F79C /* AppDelegate.m in Sources */,
 				2003E5E01F565CD100C5F79C /* QRCodeTableViewController.m in Sources */,
@@ -356,14 +356,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2003E59A1F550DCB00C5F79C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2003E59B1F550DCB00C5F79C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2003E5A21F550DCB00C5F79C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -560,6 +552,7 @@
 				2003E5C01F550DCC00C5F79C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2003E5C11F550DCC00C5F79C /* Build configuration list for PBXNativeTarget "KeyTests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +561,7 @@
 				2003E5C31F550DCC00C5F79C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2003E5C41F550DCC00C5F79C /* Build configuration list for PBXNativeTarget "KeyUITests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +570,7 @@
 				2003E5C61F550DCC00C5F79C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

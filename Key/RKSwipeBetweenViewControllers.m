@@ -74,7 +74,7 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
     NSInteger numControllers = [viewControllerArray count];
     
     if (!buttonText) {
-         buttonText = [[NSArray alloc]initWithObjects: @"first",@"second",@"third",@"fourth",@"etc",@"etc",@"etc",@"etc",nil]; //%%%buttontitle
+         buttonText = [[NSArray alloc]initWithObjects: @"camera",@"codes",@"third",@"fourth",@"etc",@"etc",@"etc",@"etc",nil]; //%%%buttontitle
     }
     
     for (int i = 0; i<numControllers; i++) {
@@ -126,7 +126,7 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
 //%%% sets up the selection bar under the buttons on the navigation bar
 -(void)setupSelector {
     selectionBar = [[UIView alloc]initWithFrame:CGRectMake(X_BUFFER-X_OFFSET, SELECTOR_Y_BUFFER,(self.view.frame.size.width-2*X_BUFFER)/[viewControllerArray count], SELECTOR_HEIGHT)];
-    selectionBar.backgroundColor = [UIColor greenColor]; //%%% sbcolor
+    selectionBar.backgroundColor = [UIColor whiteColor]; //%%% sbcolor
     selectionBar.alpha = 0.8; //%%% sbalpha
     [navigationView addSubview:selectionBar];
 }
