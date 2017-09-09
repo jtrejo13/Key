@@ -115,12 +115,13 @@
         if ([[metadataObject type] isEqualToString:AVMetadataObjectTypeQRCode]) {
             NSLog(@"%@" , [metadataObject stringValue]);
             
+            //self sendNotificationWithUsername:(NSString *) socialMedia:(NSString *)
+            
             if (_audioPlayer) {
                 [_audioPlayer play];
             }
         }
     }
-    
 }
 
 - (void)loadBeepSound
@@ -139,5 +140,28 @@
         [_audioPlayer prepareToPlay];
     }
 }
+
+#pragma mark Notifications
+
+-(void) sendNotificationWithUsername:(NSString*)username socialMedia:(NSString*)media
+{
+    UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
+    content.title = [NSString localizedUserNotificationStringForKey:media.uppercaseString arguments:nil];
+    content.body = [NSString localizedUserNotificationStringForKey:[NSString stringWithFormat:@"Add %@ on %@",username, media] arguments:nil];
+    
+    UNTimeIntervalNotificationTrigger* trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats: NO];
+    
+    UNNotificationRequest* request = [UNNotificationRequest
+                                      requestWithIdentifier:@"ContactRequest" content:content trigger:trigger];
+    
+    UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+    [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+}
+
+
 
 @end

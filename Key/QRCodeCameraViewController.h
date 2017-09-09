@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <UserNotifications/UserNotifications.h>
 
 @interface QRCodeCameraViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
