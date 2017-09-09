@@ -11,6 +11,7 @@
 @interface QRCodeCameraViewController ()
 @property (nonatomic) BOOL isReading;
 
+@property UIView *viewScanner;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 
@@ -18,22 +19,34 @@
 
 - (BOOL)startReading;
 - (void)stopReading;
-
 - (void)loadBeepSound;
 
 @end
 
 @implementation QRCodeCameraViewController
 
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    _isReading = NO;
+    [self startStopReading];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _isReading = NO;
+    _isReading = YES;
     _captureSession = nil;
     
+    //Adding camera view
+    _viewScanner = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _viewScanner.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:_viewScanner];
+    
+    [self startStopReading];
     [self loadBeepSound];
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -41,18 +54,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (IBAction)startStopReading:(UIBarButtonItem *)sender
+- (void)startStopReading
 {
     if (!_isReading) {
         if ([self startReading]) {
-            [_bbitemStart setTitle:@"Stop"];
-            [_lblStatus setText:@"Scanning for QR Code"];
+            NSLog(@"Successfully started reading");
         }
     }
     else{
         [self stopReading];
-        [_bbitemStart setTitle:@"Start"];
     }
     
     _isReading = !_isReading;
@@ -68,6 +78,7 @@
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:&error];
     
     if (!input) {
+        NSLog(@"No capture device input");
         NSLog(@"%@", [error localizedDescription]);
         return NO;
     }
@@ -106,10 +117,7 @@
     if (metadataObjects && [metadataObjects count] > 0) {
         AVMetadataMachineReadableCodeObject *metadataObject = [metadataObjects objectAtIndex:0];
         if ([[metadataObject type] isEqualToString:AVMetadataObjectTypeQRCode]) {
-            [_lblStatus performSelectorOnMainThread:@selector(setText:) withObject:[metadataObject stringValue] waitUntilDone:NO];
-            [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
-            [_bbitemStart performSelectorOnMainThread:@selector(setTitle:) withObject:@"Start!" waitUntilDone:NO];
-            _isReading = NO;
+            NSLog(@"%@" , [metadataObject stringValue]);
             
             if (_audioPlayer) {
                 [_audioPlayer play];
