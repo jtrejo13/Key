@@ -11,16 +11,16 @@
 
 //%%% customizeable button attributes
 CGFloat X_BUFFER = 0.0; //%%% the number of pixels on either side of the segment
-CGFloat Y_BUFFER = 14.0; //%%% number of pixels on top of the segment
+CGFloat Y_BUFFER = 10.0; //%%% number of pixels on top of the segment
 CGFloat HEIGHT = 30.0; //%%% height of the segment
 
 //%%% customizeable selector bar attributes (the black bar under the buttons)
 CGFloat BOUNCE_BUFFER = 10.0; //%%% adds bounce to the selection bar when you scroll
 CGFloat ANIMATION_SPEED = 0.2; //%%% the number of seconds it takes to complete the animation
-CGFloat SELECTOR_Y_BUFFER = 40.0; //%%% the y-value of the bar that shows what page you are on (0 is the top)
-CGFloat SELECTOR_HEIGHT = 4.0; //%%% thickness of the selector bar
+CGFloat SELECTOR_Y_BUFFER = 38.0; //%%% the y-value of the bar that shows what page you are on (0 is the top)
+CGFloat SELECTOR_HEIGHT = 6.0; //%%% thickness of the selector bar
 
-CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy offset.  I'm going to look for a better workaround in the future
+CGFloat X_OFFSET = 6.0; //%%% for some reason there's a little bit of a glitchy offset.  I'm going to look for a better workaround in the future
 
 @interface RKSwipeBetweenViewControllers ()
 
@@ -51,8 +51,8 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
 {
     [super viewDidLoad];
 
-    self.navigationBar.barTintColor = [UIColor colorWithRed:0.01 green:0.05 blue:0.06 alpha:1]; //%%% bartint
-    self.navigationBar.translucent = NO;
+    self.navigationBar.barTintColor = [UIColor colorWithRed:0.32 green:0.32 blue:0.32 alpha:0]; //%%% bartint
+    //self.navigationBar.translucent = YES;
     viewControllerArray = [[NSMutableArray alloc]init];
     self.currentPageIndex = 0;
     self.isPageScrollingFlag = NO;
@@ -82,7 +82,7 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
         [navigationView addSubview:button];
         
         button.tag = i; //%%% IMPORTANT: if you make your own custom buttons, you have to tag them appropriately
-        button.backgroundColor = [UIColor colorWithRed:0.03 green:0.07 blue:0.08 alpha:1];//%%% buttoncolors
+        button.backgroundColor = [UIColor colorWithRed:0.32 green:0.32 blue:0.32 alpha:0];//%%% buttoncolors
         
         [button addTarget:self action:@selector(tapSegmentButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         

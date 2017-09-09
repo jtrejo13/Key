@@ -12,6 +12,7 @@
 @property (nonatomic) BOOL isReading;
 
 @property UIView *viewScanner;
+
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 
@@ -27,9 +28,8 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"View Did Load");
-    
     [super viewDidLoad];
+        
     _isReading = NO;
     _captureSession = nil;
     
@@ -48,6 +48,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*////////////SCANNER//////////////*/
+
 - (void)startStopReading
 {
     if (!_isReading) {
@@ -59,7 +61,6 @@
     else{
         [self stopReading];
     }
-    
     _isReading = !_isReading;
 }
 
