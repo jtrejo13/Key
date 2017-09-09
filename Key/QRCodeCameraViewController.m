@@ -25,18 +25,12 @@
 
 @implementation QRCodeCameraViewController
 
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    _isReading = NO;
-    [self startStopReading];
-}
-
-
 - (void)viewDidLoad
 {
+    NSLog(@"View Did Load");
+    
     [super viewDidLoad];
-    _isReading = YES;
+    _isReading = NO;
     _captureSession = nil;
     
     //Adding camera view
@@ -58,6 +52,7 @@
 {
     if (!_isReading) {
         if ([self startReading]) {
+            _isReading = YES;
             NSLog(@"Successfully started reading");
         }
     }
