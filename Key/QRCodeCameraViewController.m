@@ -54,9 +54,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*////////////
-    SCANNER
- /////////////*/
+//////////////
+//  Scanner //
+//////////////
 
 - (void)startStopReading
 {
@@ -166,14 +166,15 @@
     UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
     content.title = [NSString localizedUserNotificationStringForKey:media.uppercaseString arguments:nil];
     content.body = [NSString localizedUserNotificationStringForKey:[NSString stringWithFormat:@"Add %@ on %@",username, media] arguments:nil];
+    content.userInfo = [NSDictionary dictionaryWithObject:[path stringByAppendingString:username] forKey:@"url"];
     
     UNTimeIntervalNotificationTrigger* trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats: NO];
     
     UNNotificationRequest* request = [UNNotificationRequest
                                       requestWithIdentifier:[media stringByAppendingString:username] content:content trigger:trigger];
     
-    UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
-    [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+    UNUserNotificationCenter* notificationCenter = [UNUserNotificationCenter currentNotificationCenter];
+    [notificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
         if (error != nil) {
             NSLog(@"%@", error.localizedDescription);
         }
