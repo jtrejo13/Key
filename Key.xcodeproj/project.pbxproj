@@ -21,6 +21,7 @@
 		2003E5E91F56665B00C5F79C /* QRCode+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5E71F56665B00C5F79C /* QRCode+CoreDataProperties.m */; };
 		2003E5EC1F56676D00C5F79C /* QRCodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */; };
 		2003E6761F572FB100C5F79C /* RKSwipeBetweenViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E6751F572FB100C5F79C /* RKSwipeBetweenViewControllers.m */; };
+		205B26531F6DF12B0087A7F3 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 205B26521F6DF12B0087A7F3 /* ProfileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeTableViewCell.m; sourceTree = "<group>"; };
 		2003E6741F572FB100C5F79C /* RKSwipeBetweenViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSwipeBetweenViewControllers.h; sourceTree = "<group>"; };
 		2003E6751F572FB100C5F79C /* RKSwipeBetweenViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSwipeBetweenViewControllers.m; sourceTree = "<group>"; };
+		205B26511F6DF12B0087A7F3 /* ProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileManager.h; sourceTree = "<group>"; };
+		205B26521F6DF12B0087A7F3 /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */,
 				2003E5971F550DCB00C5F79C /* QRCodeCameraViewController.h */,
 				2003E5981F550DCB00C5F79C /* QRCodeCameraViewController.m */,
+				205B26511F6DF12B0087A7F3 /* ProfileManager.h */,
+				205B26521F6DF12B0087A7F3 /* ProfileManager.m */,
 				200010AC1F59BB9700C6616C /* Main.storyboard */,
 				2003E5D31F5659F600C5F79C /* Core Data */,
 				2003E5911F550DCB00C5F79C /* Supporting Files */,
@@ -321,6 +326,7 @@
 				2003E6761F572FB100C5F79C /* RKSwipeBetweenViewControllers.m in Sources */,
 				2003E5E91F56665B00C5F79C /* QRCode+CoreDataProperties.m in Sources */,
 				2003E5E31F56626C00C5F79C /* Key.xcdatamodeld in Sources */,
+				205B26531F6DF12B0087A7F3 /* ProfileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

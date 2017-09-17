@@ -7,6 +7,7 @@
 //
 
 #import "QRCodeCameraViewController.h"
+#import "ProfileManager.h"
 
 @interface QRCodeCameraViewController ()
 @property (nonatomic) BOOL isReading;
@@ -17,6 +18,8 @@
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+
+@property (nonatomic, strong) ProfileManager *profileManager;
 
 - (BOOL)startReading;
 - (void)stopReading;
@@ -40,6 +43,9 @@
     
     [self startStopReading];
     [self loadBeepSound];
+    
+    //Profile manager
+    _profileManager = [[ProfileManager alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +54,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*////////////SCANNER//////////////*/
+/*////////////
+    SCANNER
+ /////////////*/
 
 - (void)startStopReading
 {
@@ -113,10 +121,8 @@
     if (metadataObjects && [metadataObjects count] > 0) {
         AVMetadataMachineReadableCodeObject *metadataObject = [metadataObjects objectAtIndex:0];
         if ([[metadataObject type] isEqualToString:AVMetadataObjectTypeQRCode]) {
-            NSLog(@"%@" , [metadataObject stringValue]);
-            
-            //self sendNotificationWithUsername:(NSString *) socialMedia:(NSString *)
-            
+            NSLog(@"%@" , metadataObject.stringValue);
+            [self sendNotificationsFromScanResult:metadataObject.stringValue];            
             if (_audioPlayer) {
                 [_audioPlayer play];
             }
@@ -143,16 +149,28 @@
 
 #pragma mark Notifications
 
--(void) sendNotificationWithUsername:(NSString*)username socialMedia:(NSString*)media
+-(void) sendNotificationsFromScanResult:(NSString*)result
+{
+    NSDictionary* socialMediaUserInfo = [_profileManager getSocialMediaUserInfoFromResult:result];
+    
+    for (NSString* socialMedia in socialMediaUserInfo) {
+        NSArray* userInfo = [socialMediaUserInfo objectForKey:socialMedia];
+        NSString* username = userInfo[0];
+        NSString* path = userInfo[1];
+        [self sendNotificationWithURL:path userName:username socialMedia:socialMedia];
+    }
+}
+
+-(void) sendNotificationWithURL:(NSString*)path userName:(NSString*)username socialMedia:(NSString*)media
 {
     UNMutableNotificationContent* content = [[UNMutableNotificationContent alloc] init];
     content.title = [NSString localizedUserNotificationStringForKey:media.uppercaseString arguments:nil];
     content.body = [NSString localizedUserNotificationStringForKey:[NSString stringWithFormat:@"Add %@ on %@",username, media] arguments:nil];
     
-    UNTimeIntervalNotificationTrigger* trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats: NO];
+    UNTimeIntervalNotificationTrigger* trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats: NO];
     
     UNNotificationRequest* request = [UNNotificationRequest
-                                      requestWithIdentifier:@"ContactRequest" content:content trigger:trigger];
+                                      requestWithIdentifier:[media stringByAppendingString:username] content:content trigger:trigger];
     
     UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
     [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
@@ -161,7 +179,5 @@
         }
     }];
 }
-
-
 
 @end
