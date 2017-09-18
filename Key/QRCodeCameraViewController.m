@@ -122,10 +122,23 @@
         AVMetadataMachineReadableCodeObject *metadataObject = [metadataObjects objectAtIndex:0];
         if ([[metadataObject type] isEqualToString:AVMetadataObjectTypeQRCode]) {
             NSLog(@"%@" , metadataObject.stringValue);
-            [self sendNotificationsFromScanResult:metadataObject.stringValue];            
+            [self sendNotificationsFromScanResult:metadataObject.stringValue];
             if (_audioPlayer) {
+                NSLog(@"Sound Played");
                 [_audioPlayer play];
             }
+            
+            [_captureSession stopRunning];
+            
+            //Time Delay
+            double delayInSeconds = 0.8;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                NSLog(@"Delay between scans");
+                [_captureSession startRunning];
+            });
+            
+
         }
     }
 }
