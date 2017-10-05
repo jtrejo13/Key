@@ -135,7 +135,7 @@
 				2003E5981F550DCB00C5F79C /* QRCodeCameraViewController.m */,
 				205B26511F6DF12B0087A7F3 /* ProfileManager.h */,
 				205B26521F6DF12B0087A7F3 /* ProfileManager.m */,
-				200010AC1F59BB9700C6616C /* Main.storyboard */,
+				200970501F6F59E5002FC677 /* Views */,
 				2003E5D31F5659F600C5F79C /* Core Data */,
 				2009704D1F6F4C42002FC677 /* Assets */,
 				2003E5911F550DCB00C5F79C /* Supporting Files */,
@@ -190,6 +190,14 @@
 				2009704B1F6F4C25002FC677 /* beep.m4r */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		200970501F6F59E5002FC677 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				200010AC1F59BB9700C6616C /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

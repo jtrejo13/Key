@@ -40,32 +40,44 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [_fetchedResultsController.sections count];
+    //return [_fetchedResultsController.sections count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id<NSFetchedResultsSectionInfo> sectionInfo = [_fetchedResultsController.sections objectAtIndex:section];
-    return sectionInfo.numberOfObjects;
+    //id<NSFetchedResultsSectionInfo> sectionInfo = [_fetchedResultsController.sections objectAtIndex:section];
+    //return sectionInfo.numberOfObjects;
+    return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"QRCodeCell";
-    QRCodeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
+    static NSString *cellIdentifier = @"QRCodeCell";
+    //QRCodeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    /*
     QRCode *code = [_fetchedResultsController objectAtIndexPath:indexPath];
     cell.members.text = [NSString stringWithFormat:@"%@", code.members];
     //[cell.codeImage setImage:code.image];
+    */
     
+    QRCodeTableViewCell *cell = [[QRCodeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+
+    
+    cell.textLabel.text = @"Juan Trejo";
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
+    /*
     id<NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
     return sectionInfo.name;
+     */
+    return @"Something";
 }
 
  // Override to support editing the table view.
