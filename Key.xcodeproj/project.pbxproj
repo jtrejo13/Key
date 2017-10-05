@@ -22,6 +22,7 @@
 		2003E5EC1F56676D00C5F79C /* QRCodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */; };
 		2003E6761F572FB100C5F79C /* RKSwipeBetweenViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E6751F572FB100C5F79C /* RKSwipeBetweenViewControllers.m */; };
 		2009704C1F6F4C25002FC677 /* beep.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 2009704B1F6F4C25002FC677 /* beep.m4r */; };
+		20151C0D1F86E72E0058B6E7 /* qr-code-sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20151C0C1F86E4580058B6E7 /* qr-code-sample.jpg */; };
 		205B26531F6DF12B0087A7F3 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 205B26521F6DF12B0087A7F3 /* ProfileManager.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		2003E6741F572FB100C5F79C /* RKSwipeBetweenViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSwipeBetweenViewControllers.h; sourceTree = "<group>"; };
 		2003E6751F572FB100C5F79C /* RKSwipeBetweenViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSwipeBetweenViewControllers.m; sourceTree = "<group>"; };
 		2009704B1F6F4C25002FC677 /* beep.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.m4r; sourceTree = "<group>"; };
+		20151C0C1F86E4580058B6E7 /* qr-code-sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "qr-code-sample.jpg"; sourceTree = "<group>"; };
 		205B26511F6DF12B0087A7F3 /* ProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileManager.h; sourceTree = "<group>"; };
 		205B26521F6DF12B0087A7F3 /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				2009704B1F6F4C25002FC677 /* beep.m4r */,
+				20151C0C1F86E4580058B6E7 /* qr-code-sample.jpg */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -262,7 +265,7 @@
 		2003E5861F550DCB00C5F79C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Key;
 				TargetAttributes = {
 					2003E58D1F550DCB00C5F79C = {
@@ -309,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20151C0D1F86E72E0058B6E7 /* qr-code-sample.jpg in Resources */,
 				2003E5A41F550DCB00C5F79C /* LaunchScreen.storyboard in Resources */,
 				2009704C1F6F4C25002FC677 /* beep.m4r in Resources */,
 				2003E5A11F550DCB00C5F79C /* Assets.xcassets in Resources */,
@@ -403,7 +407,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -411,7 +417,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -452,7 +462,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -460,7 +472,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -10,7 +10,8 @@
 
 @interface QRCodeTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *codeImage;
-@property (weak, nonatomic) IBOutlet UILabel *members;
+@property (strong, nonatomic) IBOutlet UIImageView *codeImage;
+@property (strong, nonatomic) IBOutlet UILabel *codeName;
+@property (strong, nonatomic) IBOutlet UILabel *codeMembers;
 
 @end

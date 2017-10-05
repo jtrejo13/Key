@@ -38,37 +38,38 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     //return [_fetchedResultsController.sections count];
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //id<NSFetchedResultsSectionInfo> sectionInfo = [_fetchedResultsController.sections objectAtIndex:section];
     //return sectionInfo.numberOfObjects;
-    return 1;
+    return 10;
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"QRCodeCell";
-    //QRCodeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
     /*
     QRCode *code = [_fetchedResultsController objectAtIndexPath:indexPath];
     cell.members.text = [NSString stringWithFormat:@"%@", code.members];
     //[cell.codeImage setImage:code.image];
     */
     
-    QRCodeTableViewCell *cell = [[QRCodeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-
-    
-    cell.textLabel.text = @"Juan Trejo";
+    QRCodeTableViewCell *cell = (QRCodeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[QRCodeTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
+    cell.textLabel.text = @"My Code";
+    cell.detailTextLabel.text = @"Some members";
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"qr-code-sample" ofType:@"jpg"];
+    cell.imageView.image = [UIImage imageWithContentsOfFile:filePath];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
@@ -77,7 +78,7 @@
     id<NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
     return sectionInfo.name;
      */
-    return @"Something";
+    return @"";
 }
 
  // Override to support editing the table view.
