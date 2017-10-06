@@ -126,6 +126,10 @@
     QRCodeDetailViewController *detail = [[QRCodeDetailViewController alloc] init];
     detail.modalPresentationStyle = UIModalPresentationFullScreen;
     detail.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+   
+    QRCodeTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    detail.codeImage = cell.imageView.image;
+    detail.codeTitle = cell.textLabel.text;
     
     UINavigationController *navContr = [[UINavigationController alloc] initWithRootViewController:detail];
     

@@ -10,6 +10,8 @@
 
 @interface QRCodeDetailViewController ()
 
+@property (nonatomic, strong) UIImageView* codeImageView;
+
 @end
 
 @implementation QRCodeDetailViewController
@@ -23,31 +25,13 @@
     return self;
 }
 
+#pragma mark - Load View
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self loadNavigationBar];
     [self loadCodeImageView];
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
--(void)onTapDone:(UIBarButtonItem*)item{
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)loadCodeImageView {
@@ -65,8 +49,26 @@
 -(void)loadNavigationBar {
     // Navigation Bar
     UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(onTapDone:)];
-    self.navigationItem.title = @"QR Code";
+    self.navigationItem.title = _codeTitle;
     self.navigationItem.rightBarButtonItem = doneBtn;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    _codeImageView.image = _codeImage;
+    //self.navigationController
+}
+
+#pragma mark - Navigation
+
+-(void)onTapDone:(UIBarButtonItem*)item{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Memory
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end
