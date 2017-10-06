@@ -26,21 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self loadNavigationBar];
+    [self loadCodeImageView];
     
-//    [self.navigationController setNavigationBarHidden:NO];
-//    UINavigationBar *navbar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 20, UIScreen.mainScreen.bounds.size.width, 20)];
-//    navbar.backgroundColor = [UIColor blackColor];
-//    navbar.delegate = self;
-    
-    UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(onTapDone:)];
-    
-    self.navigationItem.title = @"QR Code";
-    self.navigationItem.rightBarButtonItem = doneBtn;
-    
-   // navbar.items = [NSArray arrayWithObject:navitem];
-    
-   // [self.view addSubview:navbar];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +48,25 @@
 
 -(void)onTapDone:(UIBarButtonItem*)item{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)loadCodeImageView {
+    CGFloat halfScreenHeight = UIScreen.mainScreen.bounds.size.height / 2.0;
+    CGFloat halfScreenWidth = UIScreen.mainScreen.bounds.size.width / 2.0;
+    CGFloat imageWidth = halfScreenWidth * (4.0 / 3.0);  // 2/3 of image screen
+    CGFloat imageHeight = imageWidth;
+    CGFloat x_pos = halfScreenWidth - imageWidth / 2.0;
+    CGFloat y_pos = halfScreenHeight * (4.0 / 5.0) - imageHeight / 2.0;  // y location = 2/5 of full screen down top of screen
+    _codeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(x_pos, y_pos, imageWidth, imageHeight)];
+    _codeImageView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:_codeImageView];
+}
+
+-(void)loadNavigationBar {
+    // Navigation Bar
+    UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(onTapDone:)];
+    self.navigationItem.title = @"QR Code";
+    self.navigationItem.rightBarButtonItem = doneBtn;
 }
 
 @end

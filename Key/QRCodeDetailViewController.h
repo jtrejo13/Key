@@ -10,6 +10,6 @@
 
 @interface QRCodeDetailViewController : UIViewController <UINavigationBarDelegate>
 
-
+@property (nonatomic, strong) UIImageView* codeImageView;
 
 @end
