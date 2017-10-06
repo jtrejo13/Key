@@ -18,9 +18,10 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
+@property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) RKSwipeBetweenViewControllers *swipeController;
 
 - (void)saveContext;
-
 
 @end
 

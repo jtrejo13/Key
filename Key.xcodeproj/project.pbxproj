@@ -23,6 +23,7 @@
 		2003E6761F572FB100C5F79C /* RKSwipeBetweenViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003E6751F572FB100C5F79C /* RKSwipeBetweenViewControllers.m */; };
 		2009704C1F6F4C25002FC677 /* beep.m4r in Resources */ = {isa = PBXBuildFile; fileRef = 2009704B1F6F4C25002FC677 /* beep.m4r */; };
 		20151C0D1F86E72E0058B6E7 /* qr-code-sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20151C0C1F86E4580058B6E7 /* qr-code-sample.jpg */; };
+		20151C121F86FA120058B6E7 /* QRCodeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20151C111F86FA110058B6E7 /* QRCodeDetailViewController.m */; };
 		205B26531F6DF12B0087A7F3 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 205B26521F6DF12B0087A7F3 /* ProfileManager.m */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		2003E6751F572FB100C5F79C /* RKSwipeBetweenViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSwipeBetweenViewControllers.m; sourceTree = "<group>"; };
 		2009704B1F6F4C25002FC677 /* beep.m4r */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.m4r; sourceTree = "<group>"; };
 		20151C0C1F86E4580058B6E7 /* qr-code-sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "qr-code-sample.jpg"; sourceTree = "<group>"; };
+		20151C101F86FA110058B6E7 /* QRCodeDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeDetailViewController.h; sourceTree = "<group>"; };
+		20151C111F86FA110058B6E7 /* QRCodeDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeDetailViewController.m; sourceTree = "<group>"; };
 		205B26511F6DF12B0087A7F3 /* ProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileManager.h; sourceTree = "<group>"; };
 		205B26521F6DF12B0087A7F3 /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,17 +130,9 @@
 			children = (
 				2003E5941F550DCB00C5F79C /* AppDelegate.h */,
 				2003E5951F550DCB00C5F79C /* AppDelegate.m */,
-				2003E6741F572FB100C5F79C /* RKSwipeBetweenViewControllers.h */,
-				2003E6751F572FB100C5F79C /* RKSwipeBetweenViewControllers.m */,
-				2003E5DE1F565CD100C5F79C /* QRCodeTableViewController.h */,
-				2003E5DF1F565CD100C5F79C /* QRCodeTableViewController.m */,
-				2003E5EA1F56676D00C5F79C /* QRCodeTableViewCell.h */,
-				2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */,
-				2003E5971F550DCB00C5F79C /* QRCodeCameraViewController.h */,
-				2003E5981F550DCB00C5F79C /* QRCodeCameraViewController.m */,
-				205B26511F6DF12B0087A7F3 /* ProfileManager.h */,
-				205B26521F6DF12B0087A7F3 /* ProfileManager.m */,
-				200970501F6F59E5002FC677 /* Views */,
+				20151C0E1F86F5180058B6E7 /* Model */,
+				200970501F6F59E5002FC677 /* View */,
+				20151C0F1F86F5400058B6E7 /* Controller */,
 				2003E5D31F5659F600C5F79C /* Core Data */,
 				2009704D1F6F4C42002FC677 /* Assets */,
 				2003E5911F550DCB00C5F79C /* Supporting Files */,
@@ -195,12 +190,38 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
-		200970501F6F59E5002FC677 /* Views */ = {
+		200970501F6F59E5002FC677 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2003E5EA1F56676D00C5F79C /* QRCodeTableViewCell.h */,
+				2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */,
 				200010AC1F59BB9700C6616C /* Main.storyboard */,
 			);
-			name = Views;
+			name = View;
+			sourceTree = "<group>";
+		};
+		20151C0E1F86F5180058B6E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				205B26511F6DF12B0087A7F3 /* ProfileManager.h */,
+				205B26521F6DF12B0087A7F3 /* ProfileManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		20151C0F1F86F5400058B6E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20151C101F86FA110058B6E7 /* QRCodeDetailViewController.h */,
+				20151C111F86FA110058B6E7 /* QRCodeDetailViewController.m */,
+				2003E5DE1F565CD100C5F79C /* QRCodeTableViewController.h */,
+				2003E5DF1F565CD100C5F79C /* QRCodeTableViewController.m */,
+				2003E5971F550DCB00C5F79C /* QRCodeCameraViewController.h */,
+				2003E5981F550DCB00C5F79C /* QRCodeCameraViewController.m */,
+				2003E6741F572FB100C5F79C /* RKSwipeBetweenViewControllers.h */,
+				2003E6751F572FB100C5F79C /* RKSwipeBetweenViewControllers.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +365,7 @@
 				2003E5991F550DCB00C5F79C /* QRCodeCameraViewController.m in Sources */,
 				2003E5EC1F56676D00C5F79C /* QRCodeTableViewCell.m in Sources */,
 				2003E5961F550DCB00C5F79C /* AppDelegate.m in Sources */,
+				20151C121F86FA120058B6E7 /* QRCodeDetailViewController.m in Sources */,
 				2003E5E01F565CD100C5F79C /* QRCodeTableViewController.m in Sources */,
 				2003E5E81F56665B00C5F79C /* QRCode+CoreDataClass.m in Sources */,
 				2003E5931F550DCB00C5F79C /* main.m in Sources */,

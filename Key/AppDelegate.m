@@ -35,6 +35,7 @@
     [swipeController.viewControllerArray addObjectsFromArray:@[tableController, cameraController]];
     
     _window.rootViewController = swipeController;
+    
     [_window makeKeyAndVisible];
     
     return YES;

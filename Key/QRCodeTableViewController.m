@@ -9,6 +9,7 @@
 #import "QRCodeTableViewController.h"
 #import "QRCode+CoreDataClass.h"
 #import "QRCodeTableViewCell.h"
+#import "QRCodeDetailViewController.h"
 
 @interface QRCodeTableViewController ()
 
@@ -119,14 +120,17 @@
 }
 */
 
-
 #pragma mark - Navigation
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//     Get the new view controller using [segue destinationViewController].
-//    
-//}
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    QRCodeDetailViewController *detail = [[QRCodeDetailViewController alloc] init];
+    detail.modalPresentationStyle = UIModalPresentationFullScreen;
+    detail.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    UINavigationController *navContr = [[UINavigationController alloc] initWithRootViewController:detail];
+    
+    [self presentViewController:navContr animated:YES completion:nil];
+}
 
 #pragma mark - Managed object context
 
