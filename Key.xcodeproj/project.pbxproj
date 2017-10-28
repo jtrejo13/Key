@@ -25,6 +25,7 @@
 		20151C0D1F86E72E0058B6E7 /* qr-code-sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20151C0C1F86E4580058B6E7 /* qr-code-sample.jpg */; };
 		20151C121F86FA120058B6E7 /* QRCodeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20151C111F86FA110058B6E7 /* QRCodeDetailViewController.m */; };
 		205B26531F6DF12B0087A7F3 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 205B26521F6DF12B0087A7F3 /* ProfileManager.m */; };
+		20F78F671FA5129B00726472 /* QRCodeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F78F661FA5129B00726472 /* QRCodeSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		20151C111F86FA110058B6E7 /* QRCodeDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeDetailViewController.m; sourceTree = "<group>"; };
 		205B26511F6DF12B0087A7F3 /* ProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileManager.h; sourceTree = "<group>"; };
 		205B26521F6DF12B0087A7F3 /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileManager.m; sourceTree = "<group>"; };
+		20F78F651FA5129B00726472 /* QRCodeSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeSettingsViewController.h; sourceTree = "<group>"; };
+		20F78F661FA5129B00726472 /* QRCodeSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeSettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 		20151C0F1F86F5400058B6E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				20F78F651FA5129B00726472 /* QRCodeSettingsViewController.h */,
+				20F78F661FA5129B00726472 /* QRCodeSettingsViewController.m */,
 				20151C101F86FA110058B6E7 /* QRCodeDetailViewController.h */,
 				20151C111F86FA110058B6E7 /* QRCodeDetailViewController.m */,
 				2003E5DE1F565CD100C5F79C /* QRCodeTableViewController.h */,
@@ -365,6 +370,7 @@
 				2003E5991F550DCB00C5F79C /* QRCodeCameraViewController.m in Sources */,
 				2003E5EC1F56676D00C5F79C /* QRCodeTableViewCell.m in Sources */,
 				2003E5961F550DCB00C5F79C /* AppDelegate.m in Sources */,
+				20F78F671FA5129B00726472 /* QRCodeSettingsViewController.m in Sources */,
 				20151C121F86FA120058B6E7 /* QRCodeDetailViewController.m in Sources */,
 				2003E5E01F565CD100C5F79C /* QRCodeTableViewController.m in Sources */,
 				2003E5E81F56665B00C5F79C /* QRCode+CoreDataClass.m in Sources */,

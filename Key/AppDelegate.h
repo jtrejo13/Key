@@ -12,6 +12,7 @@
 #import "RKSwipeBetweenViewControllers.h"
 #import "QRCodeTableViewController.h"
 #import "QRCodeCameraViewController.h"
+#import "QRCodeSettingsViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate>
 

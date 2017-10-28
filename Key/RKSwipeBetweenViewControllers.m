@@ -74,7 +74,7 @@ CGFloat X_OFFSET = 6.0; //%%% for some reason there's a little bit of a glitchy 
     NSInteger numControllers = [viewControllerArray count];
     
     if (!buttonText) {
-         buttonText = [[NSArray alloc]initWithObjects: @"Codes",@"Camera",@"third",@"fourth",@"etc",@"etc",@"etc",@"etc",nil]; //%%%buttontitle
+        buttonText = [[NSArray alloc]initWithObjects: @"Camera",@"Codes",@"Settings", nil]; //%%%buttontitle
     }
     
     for (int i = 0; i<numControllers; i++) {

@@ -31,8 +31,9 @@
     QRCodeCameraViewController *cameraController = [[QRCodeCameraViewController alloc] init];
     cameraController.view.backgroundColor = [UIColor whiteColor];
     QRCodeTableViewController *tableController = [[QRCodeTableViewController alloc] init];
+    QRCodeSettingsViewController *settingsController = [[QRCodeSettingsViewController alloc] init];
     
-    [swipeController.viewControllerArray addObjectsFromArray:@[tableController, cameraController]];
+    [swipeController.viewControllerArray addObjectsFromArray:@[cameraController, tableController, settingsController]];
     
     _window.rootViewController = swipeController;
     
