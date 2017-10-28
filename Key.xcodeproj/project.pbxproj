@@ -26,6 +26,8 @@
 		20151C121F86FA120058B6E7 /* QRCodeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20151C111F86FA110058B6E7 /* QRCodeDetailViewController.m */; };
 		205B26531F6DF12B0087A7F3 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 205B26521F6DF12B0087A7F3 /* ProfileManager.m */; };
 		20F78F671FA5129B00726472 /* QRCodeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F78F661FA5129B00726472 /* QRCodeSettingsViewController.m */; };
+		20F78F6A1FA51B5000726472 /* QRCodeSettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F78F691FA51B5000726472 /* QRCodeSettingsCell.m */; };
+		20F78F6C1FA5259A00726472 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F78F6B1FA5259A00726472 /* facebook.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,9 @@
 		205B26521F6DF12B0087A7F3 /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileManager.m; sourceTree = "<group>"; };
 		20F78F651FA5129B00726472 /* QRCodeSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeSettingsViewController.h; sourceTree = "<group>"; };
 		20F78F661FA5129B00726472 /* QRCodeSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeSettingsViewController.m; sourceTree = "<group>"; };
+		20F78F681FA51B5000726472 /* QRCodeSettingsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeSettingsCell.h; sourceTree = "<group>"; };
+		20F78F691FA51B5000726472 /* QRCodeSettingsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeSettingsCell.m; sourceTree = "<group>"; };
+		20F78F6B1FA5259A00726472 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +194,7 @@
 			children = (
 				2009704B1F6F4C25002FC677 /* beep.m4r */,
 				20151C0C1F86E4580058B6E7 /* qr-code-sample.jpg */,
+				20F78F6B1FA5259A00726472 /* facebook.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -198,6 +204,8 @@
 			children = (
 				2003E5EA1F56676D00C5F79C /* QRCodeTableViewCell.h */,
 				2003E5EB1F56676D00C5F79C /* QRCodeTableViewCell.m */,
+				20F78F681FA51B5000726472 /* QRCodeSettingsCell.h */,
+				20F78F691FA51B5000726472 /* QRCodeSettingsCell.m */,
 				200010AC1F59BB9700C6616C /* Main.storyboard */,
 			);
 			name = View;
@@ -339,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20151C0D1F86E72E0058B6E7 /* qr-code-sample.jpg in Resources */,
+				20F78F6C1FA5259A00726472 /* facebook.png in Resources */,
 				2003E5A41F550DCB00C5F79C /* LaunchScreen.storyboard in Resources */,
 				2009704C1F6F4C25002FC677 /* beep.m4r in Resources */,
 				2003E5A11F550DCB00C5F79C /* Assets.xcassets in Resources */,
@@ -376,6 +385,7 @@
 				2003E5E81F56665B00C5F79C /* QRCode+CoreDataClass.m in Sources */,
 				2003E5931F550DCB00C5F79C /* main.m in Sources */,
 				2003E6761F572FB100C5F79C /* RKSwipeBetweenViewControllers.m in Sources */,
+				20F78F6A1FA51B5000726472 /* QRCodeSettingsCell.m in Sources */,
 				2003E5E91F56665B00C5F79C /* QRCode+CoreDataProperties.m in Sources */,
 				2003E5E31F56626C00C5F79C /* Key.xcdatamodeld in Sources */,
 				205B26531F6DF12B0087A7F3 /* ProfileManager.m in Sources */,
