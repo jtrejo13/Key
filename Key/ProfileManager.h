@@ -30,7 +30,9 @@ typedef enum : NSUInteger {
 
 + (ProfileManager*)sharedInstance;
 - (NSDictionary*)getSocialMediaUserInfoFromResult:(NSString*)scanResult;
+- (NSString*)getStringFromSocialMedia:(SocialMedia)media;
 
+@property (nonatomic, strong) NSArray*      socialMediaCodes;
 @property (nonatomic, strong) NSDictionary* socialMediaNames;
 @property (nonatomic, strong) NSDictionary* socialMediaLinks;
 

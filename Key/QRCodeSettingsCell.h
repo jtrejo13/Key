@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ProfileManager.h"
 
 @interface QRCodeSettingsCell : UITableViewCell
 
 @property (strong, nonatomic) UIImageView *logo;
 @property (strong, nonatomic) UILabel     *name;
 
-- (id)initWithProfileName:(NSString*)name;
+- (id)initWithProfile:(NSString*)profile ImageName:(NSString*)imageName;
 @end

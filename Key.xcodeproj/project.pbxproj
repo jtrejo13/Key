@@ -27,7 +27,6 @@
 		205B26531F6DF12B0087A7F3 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 205B26521F6DF12B0087A7F3 /* ProfileManager.m */; };
 		20F78F671FA5129B00726472 /* QRCodeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F78F661FA5129B00726472 /* QRCodeSettingsViewController.m */; };
 		20F78F6A1FA51B5000726472 /* QRCodeSettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F78F691FA51B5000726472 /* QRCodeSettingsCell.m */; };
-		20F78F6C1FA5259A00726472 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F78F6B1FA5259A00726472 /* facebook.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +84,6 @@
 		20F78F661FA5129B00726472 /* QRCodeSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeSettingsViewController.m; sourceTree = "<group>"; };
 		20F78F681FA51B5000726472 /* QRCodeSettingsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeSettingsCell.h; sourceTree = "<group>"; };
 		20F78F691FA51B5000726472 /* QRCodeSettingsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeSettingsCell.m; sourceTree = "<group>"; };
-		20F78F6B1FA5259A00726472 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +192,6 @@
 			children = (
 				2009704B1F6F4C25002FC677 /* beep.m4r */,
 				20151C0C1F86E4580058B6E7 /* qr-code-sample.jpg */,
-				20F78F6B1FA5259A00726472 /* facebook.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -347,7 +344,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				20151C0D1F86E72E0058B6E7 /* qr-code-sample.jpg in Resources */,
-				20F78F6C1FA5259A00726472 /* facebook.png in Resources */,
 				2003E5A41F550DCB00C5F79C /* LaunchScreen.storyboard in Resources */,
 				2009704C1F6F4C25002FC677 /* beep.m4r in Resources */,
 				2003E5A11F550DCB00C5F79C /* Assets.xcassets in Resources */,

@@ -10,6 +10,8 @@
 
 @interface QRCodeSettingsViewController ()
 
+@property (nonatomic, strong) NSMutableArray* cells;
+
 @end
 
 @implementation QRCodeSettingsViewController
@@ -36,7 +38,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return _cells.count;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -53,16 +55,23 @@
     
     self.title = @"Settings";
     
-    _firstNameCell = [[QRCodeSettingsCell alloc] initWithProfileName:@"Facebook"];    
+    ProfileManager* manager = [ProfileManager sharedInstance];
+    _cells = [NSMutableArray array];
+    
+    for (NSString* code in manager.socialMediaCodes) {
+        QRCodeSettingsCell* cell = [[QRCodeSettingsCell alloc]initWithProfile:[manager.socialMediaNames objectForKey:code] ImageName:code];
+        [_cells addObject:cell];
+        UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+        cell.accessoryView = switchView;
+        [switchView setOn:NO animated:NO];
+       // [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case 0:
-            switch (indexPath.row) {
-                case 0:
-                    return _firstNameCell;
-            }
+            return [_cells objectAtIndex:indexPath.row];
     }
     return nil;
 }

@@ -37,6 +37,25 @@
     self = [super init];
     if (self) {
         
+        _socialMediaCodes = @[
+            @"fb",
+            @"ig",
+            @"sc",
+            @"tw",
+            @"in",
+            @"vmo",
+            @"pin",
+            @"git",
+            @"sck",
+            @"ybe",
+            @"tum",
+            @"red",
+            @"fckr",
+            @"sdncld",
+            @"stfy",
+            @"vine"
+         ];
+        
         _socialMediaNames = @{
             @"fb"      : @"Facebook",
             @"ig"      : @"Instagram",
@@ -112,6 +131,11 @@
         [socialMediaUserInfo setObject:[NSArray arrayWithObjects:username, socialMediaURL, nil] forKey:socialMediaName];
     }
     return socialMediaUserInfo;
+}
+
+-(NSString *)getStringFromSocialMedia:(SocialMedia)media {
+    
+    return @"";
 }
 
 @end

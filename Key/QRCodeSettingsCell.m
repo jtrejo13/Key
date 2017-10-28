@@ -28,14 +28,13 @@
     return self;
 }
 
-- (id)initWithProfileName:(NSString*)name {
+- (id)initWithProfile:(NSString*)profile ImageName:(NSString*)imageName {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     if (self) {
         self.textLabel.font = [UIFont systemFontOfSize:20.0];
-        self.textLabel.text = name;
+        self.textLabel.text = profile;
         self.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"facebook" ofType:@"png"];
-        self.imageView.image = [UIImage imageWithContentsOfFile:filePath];
+        self.imageView.image = [UIImage imageNamed:imageName];
     }
     return self;
 }

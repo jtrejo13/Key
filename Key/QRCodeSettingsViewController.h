@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "QRCodeSettingsCell.h"
+#import "ProfileManager.h"
 
 @interface QRCodeSettingsViewController : UITableViewController
-
-@property (strong, nonatomic) UITableViewCell *firstNameCell;
-
-@property (strong, nonatomic) UITextField *firstNameText;
 
 @end
