@@ -10,6 +10,6 @@
 #import "QRCodeSettingsCell.h"
 #import "ProfileManager.h"
 
-@interface QRCodeSettingsViewController : UITableViewController
+@interface QRCodeSettingsViewController : UITableViewController <UITextFieldDelegate>
 
 @end

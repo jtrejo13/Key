@@ -10,8 +10,8 @@
 
 @interface QRCodeSettingsCell : UITableViewCell
 
-@property (strong, nonatomic) UIImageView *logo;
-@property (strong, nonatomic) UILabel     *name;
+@property (nonatomic, strong) UITextField* textField;
 
 - (id)initWithProfile:(NSString*)profile ImageName:(NSString*)imageName;
+
 @end

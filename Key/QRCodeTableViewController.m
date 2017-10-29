@@ -134,6 +134,7 @@
     UINavigationController *navContr = [[UINavigationController alloc] initWithRootViewController:detail];
     
     [self presentViewController:navContr animated:YES completion:nil];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Managed object context

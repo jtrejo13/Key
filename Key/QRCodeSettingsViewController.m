@@ -63,10 +63,19 @@
         [_cells addObject:cell];
         UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
         cell.accessoryView = switchView;
-        [switchView setOn:NO animated:NO];
-       // [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+        [switchView setOn:NO animated:YES];
+//        [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
     }
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    QRCodeSettingsCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    BOOL _isLabelHidden = cell.textLabel.hidden;
+    cell.textLabel.hidden = (_isLabelHidden) ? NO : YES;
+    cell.textField.hidden = _isLabelHidden;
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
@@ -79,6 +88,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 50.0;
 }
+
 
 /*
 // Override to support conditional editing of the table view.
